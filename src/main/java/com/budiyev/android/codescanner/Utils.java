@@ -94,8 +94,8 @@ final class Utils {
         }
         Collections.sort(supportedFpsRanges, new FpsRangeComparator());
         for (final int[] fpsRange : supportedFpsRanges) {
-            if (fpsRange[Parameters.PREVIEW_FPS_MIN_INDEX] >= MIN_FPS &&
-                    fpsRange[Parameters.PREVIEW_FPS_MAX_INDEX] <= MAX_FPS) {
+            if (fpsRange[Parameters.PREVIEW_FPS_MIN_INDEX] !=
+                    fpsRange[Parameters.PREVIEW_FPS_MAX_INDEX] ) {
                 parameters.setPreviewFpsRange(fpsRange[Parameters.PREVIEW_FPS_MIN_INDEX],
                         fpsRange[Parameters.PREVIEW_FPS_MAX_INDEX]);
                 return;
